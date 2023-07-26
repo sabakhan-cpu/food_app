@@ -1,0 +1,50 @@
+{%  extends 'food/base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOODSITE</title>
+    {% comment %} <link href="../../static/food/index_style.css" rel="stylesheet"> {% endcomment %}
+</head>
+<body>
+    {% block body %}
+    {% for item in item_list %}
+      <div class="row" style="border:1px solid lightgray;">
+        <div class="col-md-3 offset md-1">
+          <img src="../../static/food/{{item.item_name}}.jpg" width="150px" height="120px" class="image_class"></div>
+        <div class="col-md-2">
+          <h3 style="margin-top:20px">{{item.item_name}}</h3>
+          {% comment %} <h4>{{item.item_desc}}</h4> {% endcomment %}
+          <h5>${{item.item_price}}</h5>
+        </div>
+        
+        <div class="col-md-3">
+          <a href="{% url 'food:detail' item.id %}">
+           <button class ="btn btn-success" style="margin-top:50px">View Detail</button></a>
+      </div> 
+      <div class="col-md-3">
+        <a href="{% url 'food:update_item' item.id %}">
+          <button class ="btn btn-primary" style="margin-top:50px">Update</button></a>
+        </div>
+    </div>
+
+
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+    {%endfor%}
+    {% endblock%}
+</body>
+</html>

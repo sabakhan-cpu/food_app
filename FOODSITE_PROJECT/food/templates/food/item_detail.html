@@ -1,0 +1,31 @@
+{% extends 'food/base.html' %}
+
+{% block body %}
+<div class="container w-100" style="margin-top:30px">
+    <div class="row">
+        <div class="col-md-3">
+            
+            <img src="../../static/food/{{item.item_name}}.jpg" width="250px" height="150px" class="image_class">
+
+        </div>
+        <div class="col-md-3 offset md-2" style="margin-left:20px">
+            <p>{{item.item_desc}}</p>
+            
+             
+            
+
+        </div>
+        <div class="col-md-3" >
+            <button  class="btn btn-primary" style="margin-top:80px; width:120px">Add</button></div>
+
+    </div>
+</div>
+
+
+
+{% endblock %}
+
+
+
+
+

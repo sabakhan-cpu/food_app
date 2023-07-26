@@ -1,0 +1,19 @@
+h1{
+    color: black;
+}
+/* body{
+    background-color: lightblue;
+} */
+.image_class{
+    border:1px solid black !important;
+    margin-top:20px;
+    padding: 1px;
+    margin-left: 30px;
+    margin-bottom:10px;
+}
+/* .row_one {
+    border:1px solid black; 
+} */
+p{
+    margin-top:50px;
+}
